@@ -6,6 +6,8 @@ import Image from "next/image"
 import { PlayCircle, Music, Mic, Video, Heart, ArrowRight, Share2 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { NavigationMenu } from "@/components/ui/navigation-menu"
+export const dynamic = "force-dynamic";
+
 
 type MediaItem = {
   title: string
