@@ -25,8 +25,8 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Full%20Interview-fEcqDHjh6KERaiP2L5UgNnwK4ch4wY.png",
     icon: PlayCircle,
-    embedUrl: "__FullInterview__",
-    description: "Complete interview with Pedro Sostre III discussing automation and AI",
+    embedUrl: "__FULL_INTERVIEW__",
+    description: "Complete interview with __NAME__ discussing automation and AI",
   },
   {
     title: "Amazing Song",
@@ -34,8 +34,8 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazing%20Song-Dcsp7hrncqoSnev0LlnXA4Vn5pJSYX.png",
     icon: Music,
-    embedUrl: "__Amazingsong__",
-    description: "Pedro's magical musical creation",
+    embedUrl: "__AMAZING_SONG__",
+    description: "__NAME__'s magical musical creation",
   },
   {
     title: "Speaker Introduction",
@@ -43,20 +43,28 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Introduction-Va6zz71NB0N919I05eHJNSfPFPW3VV.png",
     icon: Mic,
-    embedUrl: "__SpeakerIntroduction__",
-    description: "Introduction to Pedro Sostre III",
+    embedUrl: "__SPEAKER_INTRODUCTION__",
+    description: "Introduction to __NAME__",
   },  
   {
     title: "Interview Highlights",
     type: "videolist",
     thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Highlights-iF52Y7jD88Ky7CxHNpyoFoy2sT9W2C.png",
     icon: Video,
-    embedUrl:"__InterviewHighlights__",
+    embedUrl: "__INTERVIEW_HIGHLIGHTS__",
     description: "Key moments and insights from the interview",
   },
 ]
 
-const workflows = "__AutomationWorkflows__"
+let workflows: any[] = []
+
+try {
+  workflows = JSON.parse("__AUTOMATION_WORKFLOWS__")
+} catch (err) {
+  console.error("Failed to parse workflows JSON", err)
+  workflows = [] // avoid crashes
+}
+
 
 const highlightTitles = [
   "Automation Philosophy and Business Impact",
@@ -141,10 +149,9 @@ export default function HomePage() {
     return () => document.removeEventListener("click", handleLinkedInShare as EventListener)
   }, [])
 
-  const profilePic = "__profilepic__";
-  const name = "__name__";
-  // const bio = "__bio__";
-  // const interviewVideo = "__interviewvedio__";
+  const profilePic = "__PROFILE_PIC__";
+  const name = "__NAME__";
+  const chatbotWebhook = "__CHATBOT_WEBHOOK__";
 
   return (
     <div className="bg-black text-white font-light-body">
