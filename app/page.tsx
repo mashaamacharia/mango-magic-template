@@ -51,7 +51,7 @@ const mediaContent: MediaItem[] = [
     type: "videolist",
     thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Highlights-iF52Y7jD88Ky7CxHNpyoFoy2sT9W2C.png",
     icon: Video,
-    embedUrl: "__INTERVIEW_HIGHLIGHTS__",
+    embedUrl: __INTERVIEW_HIGHLIGHTS__,
     description: "Key moments and insights from the interview",
   },
 ]
@@ -59,7 +59,7 @@ const mediaContent: MediaItem[] = [
 let workflows: any[] = []
 
 try {
-  workflows = JSON.parse("__AUTOMATION_WORKFLOWS__")
+  workflows = JSON.parse('__AUTOMATION_WORKFLOWS__')
 } catch (err) {
   console.error("Failed to parse workflows JSON", err)
   workflows = [] // avoid crashes
