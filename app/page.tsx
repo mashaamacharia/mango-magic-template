@@ -107,7 +107,7 @@ export default function HomePage() {
   }
 
   useEffect(() => {
-    const handleLinkedInShare = async (e: MouseEvent) => {
+    const handleLinkedInShare = async (e: Event) => {
       const target = e.target as HTMLElement
       const link = target.closest(".share-link")
 
@@ -145,8 +145,8 @@ export default function HomePage() {
       }
     }
 
-    document.addEventListener("click", handleLinkedInShare as EventListener)
-    return () => document.removeEventListener("click", handleLinkedInShare as EventListener)
+    document.addEventListener("click", handleLinkedInShare)
+    return () => document.removeEventListener("click", handleLinkedInShare)
   }, [])
 
   const profilePic = "__PROFILE_PIC__";
