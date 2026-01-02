@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 
 export const metadata: Metadata = {
-  title: "__NAME__",
+  title: "Gareth Benson",
   description: "Get instant help with our Magical Assistant",
   generator: "v0.dev",
 }
@@ -26,7 +26,7 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
         {/* Title */}
-        <title>__NAME__</title>
+        <title>Gareth Benson</title>
         {/* Load Montserrat Font */}
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
         {/* Include n8n Chat Widget Styles */}
@@ -86,7 +86,7 @@ export default function RootLayout({
               try {
                 import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js').then(({ createChat }) => {
                   createChat({
-                    webhookUrl: '__CHATBOT_WEBHOOK__',
+                    webhookUrl: 'https://automations.manymangoes.com.au/webhook/b7f7e69a-4437-43f2-81e7-acae097fc975/chat',
                     target: '#n8n-chat',
                     mode: 'window',
                     showWelcomeScreen: false,
