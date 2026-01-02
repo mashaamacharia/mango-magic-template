@@ -25,8 +25,8 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Full%20Interview-fEcqDHjh6KERaiP2L5UgNnwK4ch4wY.png",
     icon: PlayCircle,
-    embedUrl: "__FULL_INTERVIEW__",
-    description: "Complete interview with __NAME__ discussing automation and AI",
+    embedUrl: "https://drive.google.com/file/d/1nJfGjIJoM9l3hzbKzZ6OfkgILNsR3JXV/preview",
+    description: "Complete interview with Gareth Benson discussing automation and AI",
   },
   {
     title: "Amazing Song",
@@ -34,8 +34,8 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazing%20Song-Dcsp7hrncqoSnev0LlnXA4Vn5pJSYX.png",
     icon: Music,
-    embedUrl: "__AMAZING_SONG__",
-    description: "__NAME__'s magical musical creation",
+    embedUrl: "https://drive.google.com/file/d/1TsqfdlUWVFM9cYiE8yS4iO1CuAAldP9j/preview",
+    description: "Gareth Benson's magical musical creation",
   },
   {
     title: "Speaker Introduction",
@@ -43,15 +43,15 @@ const mediaContent: MediaItem[] = [
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Introduction-Va6zz71NB0N919I05eHJNSfPFPW3VV.png",
     icon: Mic,
-    embedUrl: "__SPEAKER_INTRODUCTION__",
-    description: "Introduction to __NAME__",
+    embedUrl: "https://drive.google.com/file/d/1BbKzvLwou-hBuNldzcnd36YZNNF7pHpr/view?usp=sharing",
+    description: "Introduction to Gareth Benson",
   },  
   {
     title: "Interview Highlights",
     type: "videolist",
     thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Highlights-iF52Y7jD88Ky7CxHNpyoFoy2sT9W2C.png",
     icon: Video,
-    embedUrl: __INTERVIEW_HIGHLIGHTS__,
+    embedUrl: ["https://drive.google.com/file/d/1jvMgcQ1oI0XMobrholIhrqjwMQ5Q32hM/preview", "https://drive.google.com/file/d/152JNfVbsoWS_kSXbjA28IFt_RWDBnuIz/preview", "https://drive.google.com/file/d/1rrjZSOhitDpomH0gHAv_3UAFIbLB1UoN/preview", "https://drive.google.com/file/d/1asckjPRjc9B9J97yvFrbAGr-ai3FBtXc/preview", "https://drive.google.com/file/d/1vANHP5vG6gWMQp6yU9aVl8La3rIeE7Dp/preview", "https://drive.google.com/file/d/1Dicg25YEZy98xi64UPZdwvInxc1IZyJJ/preview", "https://drive.google.com/file/d/1iZRTGwZfc5yZDhW4UCq2rPjB2Q1r7ZUY/preview", "https://drive.google.com/file/d/11XBg9s3Lj1ZMdc4mn6ZqXY-xc88ByvGc/preview", "https://drive.google.com/file/d/1-fwGKZxqQqgfsqfozJO1d6-GIcBRD492/preview", "https://drive.google.com/file/d/1olRFxPB3k93RqTMcO2dW--Ayo1Y_RteE/preview", "https://drive.google.com/file/d/1qL_QmKoZz0b2VAlIwESOs8tcwHDSt5Oh/preview", "https://drive.google.com/file/d/1eUXekANqr_a9qBn22B8a8awh-bPIXKbi/preview", "https://drive.google.com/file/d/1dyIQP7fdJFJBZ6FAIm6N1c6UiUUX2EL4/preview", "https://drive.google.com/file/d/1BLPPZ--9Vwm-NQX8z-kw9v3QMJ4yeNS7/preview", "https://drive.google.com/file/d/1nj7GinAc7j8vjR15MfF5veIYXjvDYq-h/preview", "https://drive.google.com/file/d/1S6ENAdTcb6e05h3CUfbHQ5slFxQDF7Yp/preview", "https://drive.google.com/file/d/15rKvsrcFjrZIbtcQtPg8u7nRe59u6w53/preview", "https://drive.google.com/file/d/1bmsbb4HINoUj-_RROQ0VUKjzPhIaZDtw/preview", "https://drive.google.com/file/d/1aWMkW4yJJHY9aBk45C8nkkqKh1bkymyE/preview", "https://drive.google.com/file/d/1TaRaQYITCLYpXJdgrKSNTT57dYUAWb-P/preview", "https://drive.google.com/file/d/1-Hpc2eAHPYLgI-Ok7KGzBDKd1sRjGo33/preview", "https://drive.google.com/file/d/1HTtAjjj2MmQcf7Zl6MB6XYqB4MSCOSVA/preview", "https://drive.google.com/file/d/1QAcvyln1tNCd15Dn4Di2R1ihYpOgHSPU/preview", "https://drive.google.com/file/d/1nALuv_4HU3huzkU38J9JlWuJuWaxrMMi/preview", "https://drive.google.com/file/d/16V99Fp5wMFZz0dzOD6VDRyeVoeYe03fW/preview", "https://drive.google.com/file/d/17Qrj9cN1O8VxLRUI1s7f6C0MQI10mTaj/preview"],
     description: "Key moments and insights from the interview",
   },
 ]
@@ -59,7 +59,7 @@ const mediaContent: MediaItem[] = [
 let workflows: any[] = []
 
 try {
-  workflows = JSON.parse('__AUTOMATION_WORKFLOWS__')
+  workflows = JSON.parse('[{"title": "Comic Book Creation Automation", "nodes": ["HTTP Request", "Extract JSON Data", "Text Parser", "Data Storage", "Image Generation (Midjourney)", "Image Generation (Canva)", "Merge Images", "Format for Publication", "Quality Control (Proofreading)", "Publish Output"], "description": "Streamlined creation of comic books using AI tools for visual and textual elements. Reduced production time from months to weeks and ensured quality through multiple validation steps."}, {"title": "Intellectual Property Contract Automation", "nodes": ["Document Creation", "Fill Document Fields", "Contract Review Node", "Email Notification", "Legal Document Storage", "Request Approval", "Integrate Digital Signature", "Send Final Contract", "Notify All Parties", "Quality Control Check"], "description": "Automates the creation and signing of IP contracts to secure ownership of AI-generated content. Mitigates risks of IP loss and ensures compliance with legal standards for all created works."}, {"title": "3D Storytelling Development Automation", "nodes": ["Project Creation", "Define Scope", "Upload Storyboard", "3D Model Generation (Animation Software)", "Visual Review and Feedback", "Quality Control (3D Animation Check)", "Finalize Story Elements", "Export to File", "Distribute to Platforms", "Monitor Engagement"], "description": "Facilitates the development of 3D narratives and immersive content for storytelling. Accelerates production timeline while maintaining storytelling integrity and audience engagement."}, {"title": "Immersive Exhibition Creation Automation", "nodes": ["Data Collection", "Conceptual Design", "Use AR Tools", "Combine Media (Video/Audio Elements)", "Quality Control (Experience Testing)", "Prepare Marketing Materials", "Launch Event Notification", "Post-Event Feedback Collection", "Analyze Data", "Report Findings"], "description": "Creates immersive exhibitions that blend historical storytelling with modern technology. Addresses challenges in visitor engagement and historical portrayal through innovative design."}, {"title": "Marketing Campaign Automation", "nodes": ["Market Research", "Audience Segmentation", "Content Creation (Text/Visual)", "Schedule Posts (Social Media Platforms)", "Quality Control (Content Review)", "Launch Campaign", "Monitor Engagement", "Optimize Strategies", "Report Results", "Follow-Up Actions"], "description": "Automates the execution and monitoring of marketing campaigns for new IP and products. Enhances the effectiveness of campaigns by analyzing real-time data and improving outreach strategies."}, {"title": "Educational Program Development Automation", "nodes": ["Needs Assessment", "Curriculum Design", "Generate Learning Materials (Visual/Interactive)", "Quality Control (Content Review)", "Publish Resources", "Schedule Training Sessions", "Notify Participants", "Collect Feedback", "Analyze Learning Outcomes", "Iterate Content"], "description": "Streamlines the development of educational programs that utilize AI tools to teach storytelling. Improves accessibility of quality educational content while ensuring participant engagement and feedback."}]')
 } catch (err) {
   console.error("Failed to parse workflows JSON", err)
   workflows = [] // avoid crashes
@@ -149,9 +149,9 @@ export default function HomePage() {
     return () => document.removeEventListener("click", handleLinkedInShare)
   }, [])
 
-  const profilePic = "__PROFILE_PIC__";
-  const name = "__NAME__";
-  const chatbotWebhook = "__CHATBOT_WEBHOOK__";
+  const profilePic = "https://w79dz1sjdlf3iupq.public.blob.vercel-storage.com/Gareth%20Benson-pvj6fzBFJfU7IVXgDA43WXXJeLDKzd.jpeg";
+  const name = "Gareth Benson";
+  const chatbotWebhook = "https://automations.manymangoes.com.au/webhook/b7f7e69a-4437-43f2-81e7-acae097fc975/chat";
 
   return (
     <div className="bg-black text-white font-light-body">
